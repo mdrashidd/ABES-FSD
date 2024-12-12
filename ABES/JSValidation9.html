@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validForm() {
+            var name = document.getElementById('email').value;
+            var password = document.getElementById('phone_nu').value;
+            var errorMessage = "";
+            if (name === "") {
+                errorMessage += "Name is required. ";
+            }
+
+            if (password === "") {
+                errorMessage += "Password is required. ";
+            }
+
+            if (errorMessage !== "") {
+                alert(errorMessage);
+                return false;
+            }
+            return true;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validForm()">
+        <table bgcolor="blue" border="5px" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable for="phone_nu">Phone No:</lable>
+                    </td>
+                    <td>
+                        <input type="number" id="phone_nu" name="phone_nu" require>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Register</button>
+                    </td>
+                </tr>
+                <script src="validation8.js"></script>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

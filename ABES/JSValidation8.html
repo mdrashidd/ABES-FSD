@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validForm() {
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = "";
+            if (name === "") {
+                errorMessage += "Name is required. ";
+            }
+
+            if (password === "") {
+                errorMessage += "Password is required. ";
+            }
+
+            if (errorMessage !== "") {
+                alert(errorMessage);
+                return false;
+            }
+            return true;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validForm()">
+        <table bgcolor="green" border="5px" align="center">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <lable for="password">Password:</lable>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" require>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Register</button>
+                    </td>
+                </tr>
+                <script src="validation8.js"></script>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
